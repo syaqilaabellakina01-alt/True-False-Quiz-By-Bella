@@ -1,0 +1,34 @@
+function resetScore() {
+  localStorage.setItem('quizScore',0);
+}
+function checkAnswer(isCorrect) {
+  let score = parseInt(localStorage.getItem('quizScore')) || 0;
+  if (isCorrect) {
+    score++;
+  }
+localStorage.setItem('quizScore', score);
+}
+function cancelAnswer(prevPage) {
+  let score = parseInt(localStorage.getItem('quizScore')) || 0;
+  if (score > 0) {
+    score--;
+  }
+  localStorage.setItem('quizScore', score);
+  window.location.href = prevPage;
+}
+function showFinalScore() {
+  let finalScore = localStorage.getItem('quizScore');
+  if (finalScore === null) {
+    finalScore = 0;
+  }
+  const displayElement = document.getElementById('scoreDisplay');
+  if (displayElement) {
+    displayElement.innerText = "Nilai Kamu ::" + finalScore + "/15";
+  }
+}
+const path = window.location.pathname;
+const isSoalPage = path.includes('soal');
+const isHasilPage = path.includes('hasil');
+if (!sessionStorage.getItem('quizStarted')&&(isSoalPage || isHasilPage)) {
+  window.location.href = 'index.html';
+}

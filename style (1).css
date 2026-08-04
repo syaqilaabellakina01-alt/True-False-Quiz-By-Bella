@@ -1,0 +1,46 @@
+body {
+  background-image: linear-gradient(to right, #FFE477, #947C21);
+  text-align: center;
+  h1 {
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #000000;
+  }
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-size: 27px;
+  }
+  .mbg {
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+  }
+  color: #ffffff;
+  text-shadow: 0 0 1.5px #000000;
+  .bulat {
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px;
+  }
+  .tombol-bella{
+    display: inline-block;
+    background-color: #947c21;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: normal;
+    margin-top: 5px;
+    transition: all 0.3x ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 0 3px;
+  }
+  tombol-bella:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+  }
+}
